@@ -1,4 +1,5 @@
-$(document).ready(function () {
+$(window).load(function () {
+
 	$('.slider_wrapper')._TMS({
 		show: 0,
 		pauseOnHover: false,
@@ -15,8 +16,9 @@ $(document).ready(function () {
 		waitBannerAnimation: false,
 		progressBar: false
 	});
-});
-$(document).ready(function () {
+
+	$('.sf-menu').superfish({autoArrows: true})
+
 	!function () {
 		var map = []
 				, names = []
@@ -37,10 +39,14 @@ $(document).ready(function () {
 					header.removeAttr("class").addClass(names[i - 2])
 				})
 	}();
+	$().UItoTop({easingType: 'easeOutQuart'});
+
+
+	$('#form').forms({
+		ownerEmail: '#'
+	})
+
 });
 function goToByScroll(id) {
 	$('html,body').animate({scrollTop: $("#" + id).offset().top}, 'slow');
 }
-$(document).ready(function () {
-	$().UItoTop({easingType: 'easeOutQuart'});
-});

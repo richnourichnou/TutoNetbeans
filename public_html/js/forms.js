@@ -179,9 +179,4 @@
 				&&$.extend(_,o)
 		})
 	}
-})(jQuery)
-$(window).load(function(){
-	$('#form').forms({
-		ownerEmail:'#'
-	})
-})
+})(jQuery);
